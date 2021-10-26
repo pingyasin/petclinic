@@ -52,7 +52,7 @@ Resources:
   JenkinsServer:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0947d2ba12ee1ff75
+      ImageId: ami-074cce78125f09d61
       InstanceType: t2.medium
       KeyName: !Ref KeyPairName
       IamInstanceProfile: !Ref JenkinsServerEC2Profile
@@ -75,6 +75,7 @@ Resources:
           # install java 11
           yum install java-11-amazon-corretto -y
           # install jenkins
+          amazon-linux-extras install epel -y
           wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
           rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
           yum install jenkins -y
