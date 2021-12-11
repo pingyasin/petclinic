@@ -10,7 +10,7 @@ pipeline {
         RANCHER_URL="https://rancher.pingify.us"
         // Get the project-id from Rancher UI (petclinic-cluster-staging namespace, View in API, copy projectId )
         RANCHER_CONTEXT="c-v2tm2:p-snzgn" 
-        RANCHER_CREDS=credentials('rancher-petclinic-credentials')
+        RANCHER_CREDS=credentials('rancher-creds')
     }
     stages {
         stage('Package Application') {
