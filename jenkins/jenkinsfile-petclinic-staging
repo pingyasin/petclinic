@@ -1,15 +1,15 @@
 pipeline {
-    agent { label "master" }
+    agent any
     environment {
         PATH=sh(script:"echo $PATH:/usr/local/bin", returnStdout:true).trim()
         APP_NAME="petclinic"
-        APP_REPO_NAME="james-repo/petclinic-app-staging"
+        APP_REPO_NAME="yasin-repo/petclinic-app-staging"
         AWS_ACCOUNT_ID=sh(script:'export PATH="$PATH:/usr/local/bin" && aws sts get-caller-identity --query Account --output text', returnStdout:true).trim()
-        AWS_REGION="us-east-1"
+        AWS_REGION="us-east-2"
         ECR_REGISTRY="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
-        RANCHER_URL="https://rancher01.clarusway.us"
+        RANCHER_URL="https://rancher.pingify.us"
         // Get the project-id from Rancher UI (petclinic-cluster-staging namespace, View in API, copy projectId )
-        RANCHER_CONTEXT="c-zr45p:p-jdwz6" 
+        RANCHER_CONTEXT="c-v2tm2:p-snzgn" 
         RANCHER_CREDS=credentials('rancher-petclinic-credentials')
     }
     stages {

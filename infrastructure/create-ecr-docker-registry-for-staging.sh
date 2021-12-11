@@ -1,5 +1,5 @@
 PATH="$PATH:/usr/local/bin"
-APP_REPO_NAME="yasin-repo/petclinic-app-dev"
+APP_REPO_NAME="yasin-repo/petclinic-app-staging"
 AWS_REGION="us-east-2"
 
 aws ecr create-repository \
