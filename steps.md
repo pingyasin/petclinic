@@ -107,7 +107,7 @@ Port                : 443/80
 Availability Zones  : Select AZs of RKE instances
 Target group        : `rancher-http-80-tg` target group 
 •	Configure ALB Listener of HTTP on Port 80 to redirect traffic to HTTPS on Port 443.
-•	Create DNS A record for rancher.clarusway.us (burada kendi dns isminizi kullanacaksınız) and attach the rancher-alb application load balancer to it.
+•	Create DNS A record for rancher.pingify.us (burada kendi dns isminizi kullanacaksınız) and attach the rancher-alb application load balancer to it.
 •	Install RKE, the Rancher Kubernetes Engine, Kubernetes distribution and command-line tool) on Jenkins Server.
 curl -SsL "https://github.com/rancher/rke/releases/download/v1.1.12/rke_linux-amd64" -o "rke_linux-amd64"
 sudo mv rke_linux-amd64 /usr/local/bin/rke
